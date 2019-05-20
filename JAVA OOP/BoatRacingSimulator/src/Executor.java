@@ -19,16 +19,14 @@ public class Executor {
         Context context=new Context();
 
         while (!line.equals(END_COMMAND)){
-            //variant bez factory
-           // this.commandHandler.handle(line.split("\\\\"));
-//
-//            Command command=CommandFactory.create(line);
-//            context.addCommand(command);
+   
+            Command command=CommandFactory.create(line);
+            context.addCommand(command);
 
 
 
             line=this.scanner.nextLine();
         }
-//        context.execute;
+
     }
 }
